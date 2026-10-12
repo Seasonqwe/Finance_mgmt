@@ -1,0 +1,33 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #4f8d50;
+    --green-dark: #407941;
+    --green-light: #e4f1d9;
+    --yellow: #f5d15d;
+    --cream: #f8f6df;
+    --text: #263b2b;
+    --muted: #7c867c;
+    --border: #dce5d9;
+    --white: #ffffff;
+    --error: #d65c52;
+}
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f6df, #e7f3d8);
+    color: var(--text);
+    overflow-x: hidden;
+}
