@@ -34,6 +34,9 @@ finance-management-system/
 ├── index.php           # Landing / Login page
 └── README.md           # Project documentation
 
+//test.php
+use this file to test your database connection, xampp, docker anything can be used to build a connection but docker is highly recommended as it is more reliable and havent failed me yet 
+
 ⚙️ Installation & Setup
 
 Follow these steps to run the project locally on your machine:
