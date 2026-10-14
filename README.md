@@ -80,3 +80,6 @@ http://localhost/finance-management-system/
 📄 License
 
 This project is developed for academic purposes as part of the BCA curriculum at Tribhuvan University.
+```folders
+keep the folders as it is to get the instant result
+```
