@@ -1,4 +1,3 @@
-```php
 <?php
 require_once __DIR__ . "/includes/db.php";
 
@@ -123,11 +122,8 @@ function e($value) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Create Account | FinanceFlow</title>
-
     <link rel="stylesheet" href="css/style.css">
-
     <style>
         /* Registration messages */
         .register-message {
@@ -167,14 +163,12 @@ function e($value) {
         }
     </style>
 </head>
-
 <body>
 
     <main class="login-container">
 
         <!-- Welcome Section -->
         <section class="welcome-section">
-
             <div class="logo">
                 <span>💰</span>
                 <h1>FinanceFlow</h1>
@@ -197,18 +191,14 @@ function e($value) {
                     <strong>Spend smarter. Save better.</strong>
                 </div>
             </div>
-
         </section>
 
         <!-- Registration Section -->
         <section class="login-section">
-
             <div class="login-card">
-
                 <div class="login-icon">👤</div>
 
                 <h2>Create Account</h2>
-
                 <p class="login-subtitle">
                     Join FinanceFlow and take control of your money.
                 </p>
@@ -227,13 +217,10 @@ function e($value) {
                 <?php if ($messageType !== "success"): ?>
 
                     <form action="register.php" method="POST">
-
                         <div class="input-group">
                             <label for="username">Username</label>
-
                             <div class="input-box">
                                 <span>👤</span>
-
                                 <input
                                     type="text"
                                     id="username"
@@ -251,10 +238,8 @@ function e($value) {
 
                         <div class="input-group">
                             <label for="email">Email Address</label>
-
                             <div class="input-box">
                                 <span>✉️</span>
-
                                 <input
                                     type="email"
                                     id="email"
@@ -269,10 +254,8 @@ function e($value) {
 
                         <div class="input-group">
                             <label for="password">Password</label>
-
                             <div class="input-box">
                                 <span>🔒</span>
-
                                 <input
                                     type="password"
                                     id="password"
@@ -286,13 +269,9 @@ function e($value) {
                         </div>
 
                         <div class="input-group">
-                            <label for="confirm_password">
-                                Confirm Password
-                            </label>
-
+                            <label for="confirm_password">Confirm Password</label>
                             <div class="input-box">
                                 <span>🔐</span>
-
                                 <input
                                     type="password"
                                     id="confirm_password"
@@ -308,7 +287,6 @@ function e($value) {
                         <button type="submit" class="login-button">
                             Create Account →
                         </button>
-
                     </form>
 
                     <p class="register-text">
@@ -325,7 +303,6 @@ function e($value) {
                 <?php endif; ?>
 
             </div>
-
         </section>
 
     </main>
@@ -340,4 +317,3 @@ function e($value) {
 
 </body>
 </html>
-```

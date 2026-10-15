@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>FinanceFlow - Login</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
     <!-- Decorative finance elements -->
@@ -24,7 +21,6 @@
 
         <!-- Left Side -->
         <div class="welcome-section">
-
             <div class="logo">
                 <span>💰</span>
                 <h1>FinanceFlow</h1>
@@ -42,44 +38,50 @@
 
             <div class="finance-card">
                 <div class="card-icon">📈</div>
-
                 <div>
                     <small>Monthly Savings</small>
                     <strong>$2,450.00</strong>
                 </div>
             </div>
-
         </div>
-
 
         <!-- Login Card -->
         <div class="login-section">
-
             <div class="login-card">
-
                 <div class="login-icon">
+                    
                     💵
                 </div>
 
                 <h2>Welcome Back!</h2>
-
                 <p class="login-subtitle">
                     Login to manage your finances
                 </p>
 
+                <?php
+                $errors = [
+                    "empty" => "Please enter your username and password.",
+                    "username" => "Username must be 3-50 characters and contain only letters, numbers, and underscores.",
+                    "invalid" => "Incorrect username or password. Please try again.",
+                    "inactive" => "Your account is inactive. Please contact the administrator.",
+                    "server" => "A server error occurred. Please try again."
+                ];
+
+                $error = $_GET["error"] ?? "";
+
+                if (isset($errors[$error])) {
+                    echo '<div class="login-message error" role="alert">'
+                        . htmlspecialchars($errors[$error], ENT_QUOTES, "UTF-8")
+                        . '</div>';
+                }
+                ?>
 
                 <form action="login.php" method="POST">
-
                     <!-- Username -->
                     <div class="input-group">
-
-                        <label for="username">
-                            Username
-                        </label>
-
+                        <label for="username">Username</label>
                         <div class="input-box">
                             <span>👤</span>
-
                             <input
                                 type="text"
                                 id="username"
@@ -88,20 +90,13 @@
                                 required
                             >
                         </div>
-
                     </div>
-
 
                     <!-- Password -->
                     <div class="input-group">
-
-                        <label for="password">
-                            Password
-                        </label>
-
+                        <label for="password">Password</label>
                         <div class="input-box">
                             <span>🔒</span>
-
                             <input
                                 type="password"
                                 id="password"
@@ -109,7 +104,6 @@
                                 placeholder="Enter your password"
                                 required
                             >
-
                             <button
                                 type="button"
                                 class="show-password"
@@ -118,43 +112,30 @@
                                 👁
                             </button>
                         </div>
-
                     </div>
 
-
                     <div class="login-options">
-
                         <label class="remember">
                             <input type="checkbox" name="remember">
                             Remember me
                         </label>
-
                         <a href="#">Forgot Password?</a>
-
                     </div>
-
 
                     <button type="submit" class="login-button">
                         Login
                         <span>→</span>
                     </button>
-
                 </form>
-
 
                 <p class="register-text">
                     Don't have an account?
-                   <a href="register.html">Create an account</a>
+                    <a href="register.php">Create an account</a>
                 </p>
-
             </div>
-
         </div>
-
     </div>
 
-
     <script src="js/script.js"></script>
-
 </body>
 </html>
